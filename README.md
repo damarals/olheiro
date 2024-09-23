@@ -4,7 +4,7 @@
 </div>
 <br />
 <div align="center"><strong>Análise e Classificação Automatizada de Ativos</strong></div>
-<div align="center">Uma ferramenta Python para raspar, analisar e classificar Fundos de Investimento Imobiliário (FIIs) e outros ativos variáveis.</div>
+<div align="center">Uma ferramenta Python para raspar, analisar e classificar Fundos de Investimento Imobiliário (FIIs)<br/> e outros ativos variáveis.</div>
 <br />
 <div align="center">
   <sub>Desenvolvido por <a href="https://github.com/damarals">Daniel Amaral</a> 👨‍💻</sub>
