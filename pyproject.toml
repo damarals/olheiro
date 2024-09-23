@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "olheiro"
+version = "0.1.0"
+description = ""
+authors = ["Daniel Amaral <silva.daniel86@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.10"
+beautifulsoup4 = "^4.12.3"
+requests = "^2.32.3"
+pandas = "^2.2.2"
+rich = "^13.8.1"
+
+
+[tool.poetry.group.dev.dependencies]
+repo-to-text = "^0.4.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
