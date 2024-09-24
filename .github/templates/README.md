@@ -25,6 +25,12 @@ O Olheiro é uma aplicação Python projetada para automatizar a análise e clas
 - Exibição dos FIIs mais bem classificados em uma tabela formatada
 - Extensibilidade planejada para incluir outros ativos variáveis, como ações
 
+## Top 15 FIIs
+
+A tabela abaixo apresenta os 15 FIIs mais bem classificados de acordo com as [configurações padrões](#personalização). Esta tabela é atualizada diariamente às 12:00 PM (horário de Brasília).
+
+{{fii_ranking_table}}
+
 ## Como Usar
 
 1. Clone este repositório:
@@ -65,11 +71,52 @@ config = {
 
 Por padrão, é utilizada a configuração acima.
 
-## Top 15 FIIs
+## Como Usar
 
-A tabela abaixo apresenta os 15 FIIs mais bem classificados de acordo com as [configurações padrões](#personalização). Esta tabela é atualizada diariamente às 12:00 PM (horário de Brasília).
+### 1. Usando Docker
+Docker é uma maneira fácil e rápida de rodar o projeto sem precisar configurar dependências localmente.
 
-{{fii_ranking_table}}
+   - Construa a imagem:
+      ```bash
+      docker build -t olheiro .
+      ```
+
+   - Execute o container:
+      ```bash
+      docker run --rm -v $(pwd)/data:/app/data olheiro
+      ```
+      Caso não queira armazenar os dados localmente, remova a opção de volume:
+      ```bash
+      docker run --rm olheiro
+      ```
+
+   Os resultados serão exibidos no console e salvos no diretório `data` (se optar pelo compartilhamento de volume). 
+
+### 2. Usando Poetry
+Se preferir executar o projeto localmente, sem Docker, use o gerenciador de dependências Poetry.
+
+   - Instale as dependências:
+      ```bash
+      poetry install
+      ```
+
+   - Execute o script principal:
+      ```bash
+      poetry run python main.py
+      ```
+
+   Os resultados serão exibidos no console e salvos no diretório `data`.
+
+### 3. Usando DevContainer (Para Contribuidores)
+O DevContainer é ideal para quem deseja contribuir com o projeto, pois oferece um ambiente de desenvolvimento pré-configurado com todas as dependências e configurações necessárias.
+
+1. Certifique-se de ter o Docker e o VSCode instalados, junto com a extensão Dev Containers.
+
+2. Abra o projeto no VSCode. Quando solicitado, escolha a opção "Open in Container".
+
+3. Uma vez no container, você pode instalar dependências e rodar o projeto com os mesmos comandos descritos na subseção [Usando Poetry](#2-usando-poetry).
+
+Este ambiente facilita o desenvolvimento, especialmente para quem está contribuindo, garantindo consistência e compatibilidade entre as configurações de todos os desenvolvedores.
 
 ## Contribuindo
 
