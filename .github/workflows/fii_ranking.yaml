@@ -27,12 +27,8 @@ jobs:
           python -m pip install pandas tabulate
           python .github/scripts/update_readme.py
 
-      - name: Remove other changed files (except README.md)
-        run: |
-          git reset --hard 
-          git checkout HEAD README.md
-
       - name: Commit Changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: 'docs: update README with latest top FIIs'
+          file_pattern: README.md

@@ -26,8 +26,8 @@ if __name__ == '__main__':
     da_fiis_raw = pd.read_csv(glob("data/ranked_fiis_*.csv")[0])
 
     da_fiis = pd.DataFrame({
-        'Código': da_fiis_raw['ticker'],
         'Score': (da_fiis_raw['score'] * 100).round(1).astype(str) + '%',
+        'Código': da_fiis_raw['ticker'],
         'Setor': da_fiis_raw['setor'],
         'DY (12M)': da_fiis_raw['dy_12m_acumulado'].round(2).astype(str) + '%',
         'P/VPA': da_fiis_raw['p_vpa'].round(2).astype(str),
