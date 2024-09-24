@@ -5,7 +5,7 @@ if __name__ == '__main__':
     da_fiis_raw = pd.read_csv(glob("data/ranked_fiis_*.csv")[0])
 
     da_fiis = pd.DataFrame({
-        'Código': f'[{da_fiis_raw['ticker']}](https://www.fundsexplorer.com.br/funds/{da_fiis_raw['ticker'].str.lower()})',
+        'Código': f"[{da_fiis_raw['ticker']}](https://www.fundsexplorer.com.br/funds/{da_fiis_raw['ticker'].str.lower()})",
         'Score': f"{(da_fiis_raw['score'] * 100):.1f}%",
         'Setor(es)': da_fiis_raw['setor'],
         'DY (12M)': f"{da_fiis_raw['dy_12m_acumulado']:.2f}"
