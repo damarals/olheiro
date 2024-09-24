@@ -1,4 +1,4 @@
-name: Atualização do Rank de FIIs
+name: FII Ranking Update
 
 on:
   push:

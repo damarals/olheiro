@@ -11,6 +11,7 @@ if __name__ == '__main__':
         readme_template = f.read()
 
     updated_readme = readme_template.replace('{{fii_ranking_table}}', markdown_table)
+    print(updated_readme)
 
     with open('README.md', 'w') as f:
         f.write(updated_readme)
