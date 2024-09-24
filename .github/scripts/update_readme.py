@@ -3,25 +3,23 @@ import pandas as pd
 
 def generate_links(tickers) -> list:
     """
-    Generate links for tickers with resized images using HTML tags.
+    Generate links for tickers with images and a divider using HTML tags.
     Args:
         tickers (list): A list of tickers.
     Returns:
-        list: A list of ticker links with resized images.
+        list: A list of ticker links with images and a divider.
     """
     fundsexp_img = 'https://raw.githubusercontent.com/damarals/olheiro/main/.github/fundsexplorer-logo.png'
     investidor10_img = 'https://raw.githubusercontent.com/damarals/olheiro/main/.github/investidor10-logo.png'
 
     links = []
     for ticker in tickers:
-        links.append(f"""
-        <a href="https://www.fundsexplorer.com.br/funds/{ticker.lower()}" target="_blank">
-            <img src="{fundsexp_img}" alt="Fundsexplorer" width="16" height="16">
-        </a>
-        <a href="https://www.investidor10.com.br/fiis/{ticker.lower()}" target="_blank">
-            <img src="{investidor10_img}" alt="Investidor10" width="16" height="16">
-        </a>
-        """)
+        ticker_links = '<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;">'
+        ticker_links += f'<a href="https://www.fundsexplorer.com.br/funds/{ticker.lower()}" target="_blank"><img src="{fundsexp_img}" alt="Fundsexplorer" height="32"></a>'
+        ticker_links += '<div style="width:80px;height:1px;background-color:#ccc;"></div>'
+        ticker_links += f'<a href="https://www.investidor10.com.br/fiis/{ticker.lower()}" target="_blank"><img src="{investidor10_img}" alt="Investidor10" height="12"></a>'
+        ticker_links += '</div>'
+        links.append(ticker_links)
     return links
 
 if __name__ == '__main__':
