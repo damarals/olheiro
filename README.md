@@ -47,23 +47,6 @@ A tabela abaixo apresenta os 15 FIIs mais bem classificados de acordo com as [co
 | 65.7%   | RBVA11   | Varejo                           | 11.12%     | 0.95    | 71       | <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;"><a href="https://www.fundsexplorer.com.br/funds/rbva11" target="_blank"><img src="https://raw.githubusercontent.com/damarals/olheiro/main/.github/fundsexplorer-logo.png" alt="Fundsexplorer" height="32"></a><div style="width:80px;height:1px;background-color:#ccc;"></div><a href="https://www.investidor10.com.br/fiis/rbva11" target="_blank"><img src="https://raw.githubusercontent.com/damarals/olheiro/main/.github/investidor10-logo.png" alt="Investidor10" height="12"></a></div> |
 | 65.2%   | FATN11   | Lajes Corporativas               | 11.25%     | 0.89    | 51       | <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;"><a href="https://www.fundsexplorer.com.br/funds/fatn11" target="_blank"><img src="https://raw.githubusercontent.com/damarals/olheiro/main/.github/fundsexplorer-logo.png" alt="Fundsexplorer" height="32"></a><div style="width:80px;height:1px;background-color:#ccc;"></div><a href="https://www.investidor10.com.br/fiis/fatn11" target="_blank"><img src="https://raw.githubusercontent.com/damarals/olheiro/main/.github/investidor10-logo.png" alt="Investidor10" height="12"></a></div> |
 
-## Como Usar
-
-1. Clone este repositório:
-   ```
-   git clone https://github.com/damarals/olheiro.git
-   cd olheiro
-   ```
-2. Instale as dependências:
-   ```
-   poetry install
-   ```
-3. Execute o script principal:
-   ```
-   poetry run python main.py
-   ```
-4. Os resultados serão exibidos no console e salvos no diretório `data`
-
 ## Personalização
 
 Você pode ajustar os pesos e filtros de classificação no arquivo `main.py`:
