@@ -30,7 +30,8 @@ jobs:
       - name: Commit Changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_user_name: olheiro-bot
-          commit_user_email: olheiro-bot@olheiro.dev
+          commit_user_name: Olheiro (bot) 
+          commit_user_email: olheiro@example.com
+          commit_author: Olheiro <olheiro@example.com>
           commit_message: 'docs: update README with latest top FIIs'
           file_pattern: README.md
