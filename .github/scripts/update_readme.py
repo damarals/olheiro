@@ -3,20 +3,25 @@ import pandas as pd
 
 def generate_links(tickers) -> list:
     """
-    Generate links for tickers.
+    Generate links for tickers with resized images using HTML tags.
     Args:
         tickers (list): A list of tickers.
     Returns:
-        list: A list of ticker links.
+        list: A list of ticker links with resized images.
     """
     fundsexp_img = 'https://raw.githubusercontent.com/damarals/olheiro/main/.github/fundsexplorer-logo.png'
     investidor10_img = 'https://raw.githubusercontent.com/damarals/olheiro/main/.github/investidor10-logo.png'
 
     links = []
     for ticker in tickers:
-        ticker_links = f'[![Fundsexplorer]({fundsexp_img})](https://www.fundsexplorer.com.br/funds/{ticker.lower()})\n'
-        ticker_links += f'[![Investidor10]({investidor10_img})](https://www.investidor10.com.br/fiis/{ticker.lower()})'
-        links.append(ticker_links)
+        links.append(f"""
+        <a href="https://www.fundsexplorer.com.br/funds/{ticker.lower()}" target="_blank">
+            <img src="{fundsexp_img}" alt="Fundsexplorer" width="16" height="16">
+        </a>
+        <a href="https://www.investidor10.com.br/fiis/{ticker.lower()}" target="_blank">
+            <img src="{investidor10_img}" alt="Investidor10" width="16" height="16">
+        </a>
+        """)
     return links
 
 if __name__ == '__main__':
