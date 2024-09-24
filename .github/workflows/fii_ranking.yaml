@@ -35,4 +35,4 @@ jobs:
       - name: Commit Changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: docs: update README with latest top FIIs
+          commit_message: 'docs: update README with latest top FIIs'
