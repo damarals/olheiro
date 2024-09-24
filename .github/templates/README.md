@@ -31,23 +31,6 @@ A tabela abaixo apresenta os 15 FIIs mais bem classificados de acordo com as [co
 
 {{fii_ranking_table}}
 
-## Como Usar
-
-1. Clone este repositório:
-   ```
-   git clone https://github.com/damarals/olheiro.git
-   cd olheiro
-   ```
-2. Instale as dependências:
-   ```
-   poetry install
-   ```
-3. Execute o script principal:
-   ```
-   poetry run python main.py
-   ```
-4. Os resultados serão exibidos no console e salvos no diretório `data`
-
 ## Personalização
 
 Você pode ajustar os pesos e filtros de classificação no arquivo `main.py`:
