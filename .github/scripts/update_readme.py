@@ -2,7 +2,7 @@ import os
 import pandas as pd
 
 if __name__ == '__main__':
-    print(os.listdir('.'))
+    print(os.listdir('./data'))
     da_fiis = pd.read_csv('data/ranked_fiis_*.csv') 
     da_fiis_top_15 = da_fiis.head(15)
 
