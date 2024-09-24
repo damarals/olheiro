@@ -22,12 +22,9 @@ jobs:
       - name: Run the Ranking Script
         run: docker run --rm -v ${{ github.workspace }}:/app olheiro-fii-ranker
 
-      - name: List contents of data directory
-        run: ls data
-
       - name: Update README with Top FIIs
         run: |
-          python -m pip install pandas
+          python -m pip install pandas tabulate
           python .github/scripts/update_readme.py
 
       - name: Remove other changed files (except README.md)
@@ -38,4 +35,4 @@ jobs:
       - name: Commit Changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: Update FII ranking and README
+          commit_message: docs: update README with latest top FIIs
