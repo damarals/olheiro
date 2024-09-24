@@ -14,7 +14,7 @@ def generate_links(tickers) -> list:
 
     links = []
     for ticker in tickers:
-        ticker_links = '<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;">'
+        ticker_links = '<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;">'
         ticker_links += f'<a href="https://www.fundsexplorer.com.br/funds/{ticker.lower()}" target="_blank"><img src="{fundsexp_img}" alt="Fundsexplorer" height="32"></a>'
         ticker_links += '<div style="width:80px;height:1px;background-color:#ccc;"></div>'
         ticker_links += f'<a href="https://www.investidor10.com.br/fiis/{ticker.lower()}" target="_blank"><img src="{investidor10_img}" alt="Investidor10" height="12"></a>'
@@ -26,7 +26,7 @@ if __name__ == '__main__':
     da_fiis_raw = pd.read_csv(glob("data/ranked_fiis_*.csv")[0])
 
     da_fiis = pd.DataFrame({
-        'Código': f'[' + da_fiis_raw['ticker'] + '](https://www.fundsexplorer.com.br/funds/' + da_fiis_raw['ticker'].str.lower() + ')',
+        'Código': da_fiis_raw['ticker'],
         'Score': (da_fiis_raw['score'] * 100).round(1).astype(str) + '%',
         'Setor': da_fiis_raw['setor'],
         'DY (12M)': da_fiis_raw['dy_12m_acumulado'].round(2).astype(str) + '%',
