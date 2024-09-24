@@ -1,11 +1,8 @@
 name: FII Ranking Update
 
 on:
-  push:
-    branches:
-      - main
-  # schedule:
-  #   - cron: '0 12 * * *'
+  schedule:
+    - cron: '0 12 * * *'
 
 jobs:
   update_ranking:
@@ -30,5 +27,6 @@ jobs:
       - name: Commit Changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
+          commit_user_name: olheiro_bot
           commit_message: 'docs: update README with latest top FIIs'
           file_pattern: README.md
