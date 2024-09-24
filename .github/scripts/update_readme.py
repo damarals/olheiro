@@ -6,9 +6,9 @@ if __name__ == '__main__':
 
     da_fiis = pd.DataFrame({
         'Código': f"[{da_fiis_raw['ticker']}](https://www.fundsexplorer.com.br/funds/{da_fiis_raw['ticker'].str.lower()})",
-        'Score': f"{da_fiis_raw['score']:.1f}%",
+        'Score': (da_fiis_raw['score'] * 100).round(1).astype(str) + '%',
         'Setor(es)': da_fiis_raw['setor'],
-        'DY (12M)': f"{da_fiis_raw['dy_12m_acumulado']:.2f}"
+        'DY (12M)': da_fiis_raw['dy_12m_acumulado'].round(2)
     }).head(15) # top 15
 
     markdown_table = da_fiis.to_markdown(index=False, numalign="left", stralign="left")
